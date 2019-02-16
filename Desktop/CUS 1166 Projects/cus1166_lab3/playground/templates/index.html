@@ -1,0 +1,21 @@
+<html>
+    <body>
+    <form action="'/add_course">
+        Classes/Courses to Add: <br>
+        <input type = "text"><br><input type = "submit">
+    </form>
+
+    <ul>
+        {% block courses %}
+
+        {% for class in classes %}
+
+        <li> Course Name</li>
+        {{class[0]}}: {{class[1]}}
+
+        {% endfor %}
+
+        {% endblock %}
+    </ul>
+    </body>
+</html>
